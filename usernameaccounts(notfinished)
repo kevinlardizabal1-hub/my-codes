@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string username;
+
+    std::cout << "Please register first" << std::endl;
+
+   do {
+     std::cout << "Enter a valid username: " << std::endl;
+     
+    std::getline(std::cin, username); 
+   
+   
+    if (username.empty()) {
+      std::cout << "Must input characters!";
+    }
+    
+    else if (username.length() <= 5) {
+    	std::cout <<"Characters must be more than 5!" << std::endl;
+    }
+    
+    else if (username.length() >= 10) {
+    	std::cout <<"Characters must be less than 10!" << std::endl;
+    }
+    
+    else {
+    	std::cout << "Welcome: " << username;
+    }
+    
+  }  while (username.empty() || username.length() <= 5 || username.length() >= 10);
+
+    return 0;
+}
