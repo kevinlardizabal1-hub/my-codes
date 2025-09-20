@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int x, even = 0, odd = 0;
+
+cout << "This program calculates how many even and odd number your number is" << endl; 
+
+while (x >= 0) {
+	
+	cout <<"Please input yout number: " << endl;
+cin >> x;
+
+if (x == -1) {
+	cout << "Program Terminated because of -1";
+	return 1;
+}
+
+	for (int i = 1; i <= x; i++){
+		
+		if(i % 2 == 0){
+			even++;
+			}
+			else { 
+			odd++;
+			}
+	}
+	
+	cout << "There are: " << even << " Even numbers" <<endl; 
+
+cout << "There are: " << odd << " Odd Numbers" << endl;
+
+cout << "Programmed by: Valdez, Kevin Christopher L." << endl; 
+cout << "Final_Examination" << endl;
+}
+		
+return 0; 
+}
